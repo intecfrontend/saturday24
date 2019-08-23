@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- https://www.w3resource.com/javascript-exercises/javascript-date-exercise-16.php  -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="mijnScript.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <input type="date" id="myDeparture" name="fname" placeholder="hoe heet je?" value=""><br>
+
+
+    <button onclick="TUD()">Submit</button>
+
+    <p id="demo"></p>
+    <p id="now"></p>
+
+
+
+
+    <script>
+        function TUD() {
+            /*x */
+            var DD = document.getElementById("myDeparture").value;
+            var TD = new Date()
+            alert(TD);
+            var str = TD.getFullYear() + "-" + (TD.getMonth() + 1) + "-" + TD.getDate();
+
+
+            document.getElementById("demo").innerHTML = DD;
+            document.getElementById("now").innerHTML = str;
+
+
+        }
+    </script>
+    <script type="text/javascript">
+        //Set the two dates
+
+        today = new Date();
+        var DD = document.getElementById("myDeparture").value;
+        var str = TD.getFullYear() + "-" + parseInt(TD.getMonth() + 1) + "-" + TD.getDate();
+
+        var date_of_departure = str; //Month is 0-11 in JavaScript
+        if (today.getMonth() == 11 && today.getDate() > 25) { //if date_of_departure has passed already
+            date_of_departure.setFullYear(date_of_departure.getFullYear() +
+                1);
+        } //calculate next year's date_of_departure
+        //Set 1 day in milliseconds
+        var one_day = 1000 * 60 * 60 * 24;
+        //Calculate difference btw the two dates, and convert to days
+        document.write(Math.ceil((date_of_departure.getTime() - today.getTime()) / (one_day)) +
+            " days left until date_of_departure!");
+    </script>
+    </script>
+</body>
+
+</html>
